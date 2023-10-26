@@ -43,17 +43,17 @@ const Layout = () => {
                         <div className="col-auto">
                             <p className="text-center">Bryan Gitman</p>
                             <div class="d-flex justify-content-center fs-2 gap-4">
-                                <a className="text-gradient" href="#!"><i className="bi bi-envelope-fill"></i></a>
-                                <a className="text-gradient" href="#!"><i className="bi bi-linkedin"></i></a>
-                                <a className="text-gradient" href="#!"><i className="bi bi-github"></i></a>
+                                <a className="text-gradient" href="mailto:brygitman@gmail.com"><i className="bi bi-envelope-fill"></i></a>
+                                <a className="text-gradient" href="https://ar.linkedin.com/in/bryangitman"><i className="bi bi-linkedin"></i></a>
+                                <a className="text-gradient" href="https://github.com/BryanGitman"><i className="bi bi-github"></i></a>
                             </div>
                         </div>
                         <div className="col-auto">
                             <p className="text-center">Matías Zalcman</p>
                             <div class="d-flex justify-content-center fs-2 gap-4">
-                                <a className="text-gradient" href="#!"><i className="bi bi-envelope-fill"></i></a>
-                                <a className="text-gradient" href="#!"><i className="bi bi-linkedin"></i></a>
-                                <a className="text-gradient" href="#!"><i className="bi bi-github"></i></a>
+                                <a className="text-gradient" href="mailto:mlzalcman@gmail.com"><i className="bi bi-envelope-fill"></i></a>
+                                <a className="text-gradient" href="https://ar.linkedin.com/in/matizalcman"><i className="bi bi-linkedin"></i></a>
+                                <a className="text-gradient" href="https://github.com/Matias-Zalcman"><i className="bi bi-github"></i></a>
                             </div>
                         </div>
                     </div>
