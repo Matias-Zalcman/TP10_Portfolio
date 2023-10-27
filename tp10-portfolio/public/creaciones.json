@@ -3,7 +3,7 @@
         "Id": 1,
         "Titulo": "iDEA",
         "Descripcion": "Una aplicación para encontrar el Desfibrilador Externo Automático (DEA) más cercano y obtener información sobre este y todos los que lo rodean para diagnosticar y poder ayudar a restablecer el ritmo cardíaco cuando una persona sufre un paro.",
-        "Imagen": "%PUBLIC_URL%/iDEA.png",
+        "Imagen": "/logos/iDEA.png",
         "FechaInicio": "mar. 2023",
         "FechaFin": "actualidad"
     },
@@ -11,7 +11,7 @@
         "Id": 2,
         "Titulo": "OneLang",
         "Descripcion": "Una aplicación para que los sordos y los no sordos puedan comunicarse con los demás y aprender la lengua de señas de una forma divertida. A este proyecto le fue otorgada una mención por impacto social e innovación.",
-        "Imagen": "%PUBLIC_URL%/OneLang.png",
+        "Imagen": "/logos/OneLang.png",
         "FechaInicio": "ago. 2022",
         "FechaFin": "nov. 2022"
     },
@@ -19,7 +19,7 @@
         "Id": 3,
         "Titulo": "WeFly",
         "Descripcion": "Una red social especialmente pensada para tener y compartir las mejores experiencias de viaje por el mundo.",
-        "Imagen": "%PUBLIC_URL%/WeFly.png",
+        "Imagen": "/logos/WeFly.png",
         "FechaInicio": "oct. 2022",
         "FechaFin": "nov. 2022"
     },
@@ -27,7 +27,7 @@
         "Id": 4,
         "Titulo": "GZ Market",
         "Descripcion": "Un e-commerce donde se pueden encontrar todo tipo de productos en un mismo lugar.",
-        "Imagen": "%PUBLIC_URL%/GZMarket.png",
+        "Imagen": "/logos/GZMarket.png",
         "FechaInicio": "jul. 2023",
         "FechaFin": "sep. 2023"
     },
@@ -51,7 +51,7 @@
         "Id": 7,
         "Titulo": "Pizzas",
         "Descripcion": "Una página con su API para acceder a toda la información sobre todo tipo de pizzas.",
-        "Imagen": "%PUBLIC_URL%/Pizzas.png",
+        "Imagen": "/logos/Pizzas.png",
         "FechaInicio": "abr. 2023",
         "FechaFin": "may. 2023"
     },
@@ -67,7 +67,7 @@
         "Id": 9,
         "Titulo": "Who wants to be a millionaire - ORT",
         "Descripcion": "Un famoso juego de preguntas y respuestas en el que podés probar tus conocimientos y ganar dinero por eso, en este caso sobre ORT. Está disponible en inglés y en español.",
-        "Imagen": "%PUBLIC_URL%/WWTBAM.png",
+        "Imagen": "/logos/WWTBAM.png",
         "FechaInicio": "ago. 2022",
         "FechaFin": "sep. 2022"
     },
@@ -75,7 +75,7 @@
         "Id": 10,
         "Titulo": "Encontrá el tesoro en ORT",
         "Descripcion": "Una sala de escape en la que a través de desafíos que demuestren tu inteligencia puedas encontrar el tesoro que escondió el fundador de ORT dentro de la estructura del aula más remota de los 4 edificios",
-        "Imagen": "%PUBLIC_URL%/EETEO.png",
+        "Imagen": "/logos/EETEO.png",
         "FechaInicio": "may. 2022",
         "FechaFin": "jun. 2022"
     }
