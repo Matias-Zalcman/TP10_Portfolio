@@ -3,16 +3,25 @@ import { Link, Outlet } from "react-router-dom";
 import Contacto from '../components/Contacto';
 import FavoritoContext from "../context/favoritoContext";
 import Badge from '@mui/material/Badge';
+import ModalCreacion from "../components/ModalCreacion";
+import axios from 'axios';
 
 const Layout = () => {
     const favorito = useContext(FavoritoContext);
     const [cantProyectos, setCantProyectos] = useState(0);
+    const [creaciones, setCreaciones] = useState([]);
+
+    const getCreaciones = () => axios.get('http://localhost:3000/creaciones.json').then(res => setCreaciones(res.data)).catch(error => console.log(error));
 
     const calcularCantProyectos = () => {
         let cant = 0;
         favorito.favorito.map(proyecto => cant++);
         setCantProyectos(cant);
     }
+
+    useEffect(() => {
+        getCreaciones();
+    }, []);
 
     useEffect(() => {
         calcularCantProyectos();
@@ -50,7 +59,7 @@ const Layout = () => {
                         </div>
                         <div className="col-auto">
                             <p className="text-center">Matías Zalcman</p>
-                            <div class="d-flex justify-content-center fs-2 gap-4">
+                            <div className="d-flex justify-content-center fs-2 gap-4">
                                 <a className="text-gradient" href="mailto:mlzalcman@gmail.com"><i className="bi bi-envelope-fill"></i></a>
                                 <a className="text-gradient" href="https://ar.linkedin.com/in/matizalcman"><i className="bi bi-linkedin"></i></a>
                                 <a className="text-gradient" href="https://github.com/Matias-Zalcman"><i className="bi bi-github"></i></a>
@@ -59,6 +68,7 @@ const Layout = () => {
                     </div>
                 </div>
             </footer>
+            {creaciones.map(creacion => <ModalCreacion creacion={creacion}></ModalCreacion>)}
         </>
     );
 }

@@ -2,8 +2,20 @@ import * as React from 'react';
 import { Link } from "react-router-dom";
 import Box from '@mui/material/Box';
 import Tabs, { tabsClasses } from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Creacion from '../components/Creacion';
+import axios from 'axios';
+import { height } from '@mui/system';
 
 const Home = () => {
+    const [creaciones, setCreaciones] = React.useState([]);
+
+    const getCreaciones = () => axios.get('http://localhost:3000/creaciones.json').then(res => setCreaciones(res.data)).catch(error => console.log(error));
+
+    React.useEffect(() => {
+        getCreaciones();
+    }, []);
+
     return (
         <main className="flex-shrink-0">
         <header className="py-5">
@@ -38,22 +50,26 @@ const Home = () => {
                             >
                             <Tabs
                                 variant="scrollable"
+                                selectionFollowsFocus
                                 scrollButtons
-                                aria-label="visible arrows tabs example"
+                                allowScrollButtonsMobile
+                                aria-label="scrollable force tabs example"
                                 sx={{
                                 [`& .${tabsClasses.scrollButtons}`]: {
                                     '&.Mui-disabled': { opacity: 0.3 },
                                 },
                                 }}
                             >
-                                <div class="card" style={{width: '25rem'}}>
-                                    <img class="card-img-top" src=".../100px180/" alt="..."/>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
+                                { 
+                                    creaciones.map(creacion => {
+                                        if(creacion.Id >= 1 && creacion.Id <= 6)
+                                        {
+                                            return (
+                                                <Tab sx={{maxHeight: 500, marginRight: '3%'}} key={creacion.Id} label={<Creacion creacion={creacion}></Creacion>} />
+                                            )
+                                        }
+                                    })
+                                }
                             </Tabs>
                         </Box>
                     </div>
