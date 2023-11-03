@@ -5,7 +5,6 @@ import Tabs, { tabsClasses } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Creacion from '../components/Creacion';
 import axios from 'axios';
-import { height } from '@mui/system';
 
 const Home = () => {
     const [creaciones, setCreaciones] = React.useState([]);
@@ -23,7 +22,7 @@ const Home = () => {
                     <div className="row gx-5 align-items-center">
                         <div className="col-xxl-5">
                             <div className="text-center text-xxl-start">
-                                <div className="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Diseño &middot; Desarrollo &middot; Innovación</div></div>
+                                <div className="badge bg-gradient-primary-to-secondary text-white mb-4"><div className="text-uppercase">Diseño &middot; Desarrollo &middot; Innovación</div></div>
                                 <div className="fs-3 fw-light text-muted">Podemos ayudarte a</div>
                                 <h1 className="display-3 fw-bolder mb-5"><span className="text-gradient d-inline">Hacer tus ideas realidad</span></h1>
                                 <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
@@ -64,9 +63,10 @@ const Home = () => {
                                     creaciones.map(creacion => {
                                         if(creacion.Id >= 1 && creacion.Id <= 6)
                                         {
-                                            return (
-                                                <Tab sx={{maxHeight: 500, marginRight: '3%'}} key={creacion.Id} label={<Creacion creacion={creacion}></Creacion>} />
-                                            )
+                                            return <Tab sx={{maxHeight: 500, marginRight: '1.1%'}} key={creacion.Id} data-bs-toggle="modal" data-bs-target={"#exampleModal" + creacion.Id} label={<Creacion creacion={creacion} screen="Home"></Creacion>} />
+                                        }
+                                        else{
+                                            return ""
                                         }
                                     })
                                 }

@@ -11596,7 +11596,7 @@ html {
   max-height: 45rem;
   position: absolute;
   bottom: 0;
-  top: -14%;
+  top: -12.5%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -11740,4 +11740,31 @@ html {
 
 .msj {
   margin: 1%
+}
+
+/* Estilo para el contenedor del footer */
+.footer-container {
+  background-color: #fff;
+  padding: 20px; /* Ajusta el relleno según tus necesidades */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Estilo para el texto de derechos de autor y enlaces de contacto */
+.footer-text {
+  text-align: center;
+}
+
+/* Estilo para los enlaces de contacto */
+.footer-links {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo para los iconos de enlaces */
+.footer-links a {
+  color: #007bff; /* Cambia el color a tu preferencia */
+  margin: 0 10px; /* Ajusta el espacio entre los iconos */
+  font-size: 24px; /* Ajusta el tamaño de fuente según tus necesidades */
 }
