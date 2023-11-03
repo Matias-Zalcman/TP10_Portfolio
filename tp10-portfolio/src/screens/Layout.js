@@ -44,31 +44,32 @@ const Layout = () => {
                 </div>
             </nav>
             <Outlet />
-            <footer className="bg-white py-4 mt-auto">
+            <footer className="footer-container">
                 <div className="container px-5">
                     <Contacto></Contacto>
-                    <div className="row align-items-center justify-content-between flex-column flex-sm-row">
-                        <div className="col-auto"><div className="small m-0">Copyright &copy; Bryan Gitman & Matías Zalcman 2023</div></div>
-                        <div className="col-auto">
-                            <p className="text-center">Bryan Gitman</p>
-                            <div class="d-flex justify-content-center fs-2 gap-4">
-                                <a className="text-gradient" href="mailto:brygitman@gmail.com"><i className="bi bi-envelope-fill"></i></a>
-                                <a className="text-gradient" href="https://ar.linkedin.com/in/bryangitman"><i className="bi bi-linkedin"></i></a>
-                                <a className="text-gradient" href="https://github.com/BryanGitman"><i className="bi bi-github"></i></a>
-                            </div>
+                    <div className="row align-items-center justify-content-between flex-column flex-sm-row footer-text">
+                    <div className="col-auto"><div className="small m-0">Copyright &copy; Bryan Gitman & Matías Zalcman 2023</div></div>
+                    <div className="col-auto">
+                        <p className="text-center">Bryan Gitman</p>
+                        <div className="d-flex justify-content-center fs-2 gap-4 footer-links">
+                        <a className="text-gradient" href="mailto:brygitman@gmail.com"><i className="bi bi-envelope-fill"></i></a>
+                        <a className="text-gradient" href="https://ar.linkedin.com/in/bryangitman"><i className="bi bi-linkedin"></i></a>
+                        <a className="text-gradient" href="https://github.com/BryanGitman"><i className="bi bi-github"></i></a>
                         </div>
-                        <div className="col-auto">
-                            <p className="text-center">Matías Zalcman</p>
-                            <div className="d-flex justify-content-center fs-2 gap-4">
-                                <a className="text-gradient" href="mailto:mlzalcman@gmail.com"><i className="bi bi-envelope-fill"></i></a>
-                                <a className="text-gradient" href="https://ar.linkedin.com/in/matizalcman"><i className="bi bi-linkedin"></i></a>
-                                <a className="text-gradient" href="https://github.com/Matias-Zalcman"><i className="bi bi-github"></i></a>
-                            </div>
+                    </div>
+                    <div className="col-auto">
+                        <p className="text-center">Matías Zalcman</p>
+                        <div className="d-flex justify-content-center fs-2 gap-4 footer-links">
+                        <a className="text-gradient" href="mailto:mlzalcman@gmail.com"><i className="bi bi-envelope-fill"></i></a>
+                        <a className="text-gradient" href="https://ar.linkedin.com/in/matizalcman"><i className="bi bi-linkedin"></i></a>
+                        <a className="text-gradient" href="https://github.com/Matias-Zalcman"><i className="bi bi-github"></i></a>
                         </div>
+                    </div>
                     </div>
                 </div>
             </footer>
-            {creaciones.map(creacion => <ModalCreacion creacion={creacion}></ModalCreacion>)}
+
+            {creaciones.map(creacion => <ModalCreacion key={creacion.Id} creacion={creacion}></ModalCreacion>)}
         </>
     );
 }
