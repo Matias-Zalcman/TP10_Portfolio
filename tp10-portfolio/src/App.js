@@ -20,7 +20,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("favorito", JSON.stringify(favorito));
+    if (favorito?.length) {
+      localStorage.setItem("favorito", JSON.stringify(favorito));
+    }
   }, [favorito]);
 
   return (

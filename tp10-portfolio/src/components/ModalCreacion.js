@@ -18,7 +18,7 @@ const ModalCreacion = ({creacion}) => {
                         <p>{creacion.Descripcion}</p>
                     </div>
                     <div className="modal-footer">
-                        {favorito.favorito.find((c) => c.Id === creacion.Id)?<button type="button" className="btn btn-danger" onClick={() => favorito.setFavorito(favorito.favorito.filter(c => c !== creacion))}>Quitar de favoritos</button>:<button type="button" className="btn btn-success" onClick={() => favorito.setFavorito([...favorito.favorito, creacion])}>Agregar a favoritos</button>}
+                        {favorito.favorito.find((c) => c.Id === creacion.Id)?<button type="button" className="btn btn-danger" onClick={() => favorito.setFavorito(favorito.favorito.filter(c => c.Id !== creacion.Id))}>Quitar de favoritos</button>:<button type="button" className="btn btn-success" onClick={() => favorito.setFavorito([...favorito.favorito, creacion])}>Agregar a favoritos</button>}
                     </div>
                 </div>
             </div>

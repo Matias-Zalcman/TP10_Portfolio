@@ -1,12 +1,12 @@
-const Cv = ({nombre, titulacion, certificado, nivelSql, aptitudes, lenguajes }) => {
+const Cv = ({foto, nombre, titulacion, certificado, nivelSql, aptitudes, lenguajes }) => {
     return(
-        <div class="container px-5 my-5">
+        <div class="container px-1 my-5">
                 <div class="text-center mb-5">
-                    <img src="/mati.jpg" alt="..." style={{ borderRadius: "50%", width: "15%"}}></img>
+                    <img src={foto} alt="..." style={{ borderRadius: "50%", width: "15%"}}></img>
                     <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">{nombre}</span></h1>
                 </div>
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                <div class="row gx-9 justify-content-center">
+                    <div class="col-lg-12 col-xl-11 col-xxl-10">
                         <section>
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h2 class="text-primary fw-bolder mb-0">Educación</h2>    
@@ -23,9 +23,9 @@ const Cv = ({nombre, titulacion, certificado, nivelSql, aptitudes, lenguajes }) 
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
-                                            <div><ul><li>Bachiller en informática con certificación en diseño y <tr><td></td></tr>desarrollo de aplicaciones web y móviles</li></ul></div>
+                                            <div><ul><li>Bachiller en informática con certificación en diseño y <tr><td></td></tr> desarrollo de aplicaciones web y móviles</li></ul></div>
                                             <div><ul><li>Titulación: {titulacion}</li></ul></div>
-                                            <div><ul><li>Proyecto Final: Desarrollo de aplicación móvil para la <tr><td></td></tr>localización de DEA (Desfibrilador Externo Automático). Lo desarrolle en equipo. Dentro del proyecto me encargué de crear el diseño y prototipo de las pantallas y la creación de la Base de Datos. Actualmente me encuentro <tr><td></td></tr>desarrollándolo.</li></ul></div>
+                                            <div><ul><li>Proyecto Final: Desarrollo de aplicación móvil para la <tr><td></td></tr> localización de DEA (Desfibrilador Externo Automático).<tr><td></td></tr> Lo desarrolle en equipo. Dentro del proyecto me <tr><td></td></tr> encargué de crear el diseño y prototipo de las pantallas y la creación de la Base de Datos. Actualmente me <tr><td></td></tr> encuentro desarrollándolo.</li></ul></div>
                                         </div>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@ const Cv = ({nombre, titulacion, certificado, nivelSql, aptitudes, lenguajes }) 
                                             <div class="bg-light p-4 rounded-4">
                                                 <div class="text-secondary fw-bolder mb-2">2022</div>
                                                 <div class="mb-2">
-                                                    <div class="small fw-bolder">SQL ({nivelSql}) Certificate</div>
+                                                    <div class="small fw-bolder">SQL ({nivelSql}) <tr><td></td></tr> Certificate</div>
                                                     <div class="small text-muted">HackerRank</div>
                                                 </div>
                                                 <div class="fst-italic">
