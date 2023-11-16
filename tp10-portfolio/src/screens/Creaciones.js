@@ -12,8 +12,8 @@ const Creaciones = () => {
     }, []);
 
     return (
-        <div className="container text-center" style={{marginLeft: '10%'}}>
-            <div className="row justify-content-center" style={{width: '120%'}}>
+        <div className="container text-center">
+            <div className="row justify-content-center">
                 {creaciones.map(creacion => <div key={creacion.Id} className="col-4" style={{marginTop: '3%'}}><Creacion creacion={creacion}></Creacion></div>)}
             </div>
         </div>
